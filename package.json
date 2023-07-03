@@ -4,11 +4,7 @@
   "description": "Simple CRUD API using in-memory database underneath",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec ts-node-dev src/index.ts",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --silent",
-    "test:verbose": "jest",
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec ts-node-dev src/index.ts",
     "build": "tsc"
   },
   "type": "module",

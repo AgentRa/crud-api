@@ -11,3 +11,5 @@ export interface User {
   age: number;
   hobbies: string[];
 }
+
+export type UserResponse = [User | User[], string];

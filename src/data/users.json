@@ -7,32 +7,5 @@
       "football",
       "basketball"
     ]
-  },
-  {
-    "id": "fb3463a0-7d6e-54a3-bcd8-1b93388c648d",
-    "username": "Doe",
-    "age": 35,
-    "hobbies": [
-      "tennis",
-      "golf"
-    ]
-  },
-  {
-    "username": "Newly Created",
-    "age": 15,
-    "hobbies": [
-      "tennis",
-      "golf"
-    ],
-    "id": "ca30ab3f-c7fe-52e5-8661-892df3c233d7"
-  },
-  {
-    "username": "Newly Created",
-    "age": 15,
-    "hobbies": [
-      "tennis",
-      "golf"
-    ],
-    "id": "ca30ab3f-c7fe-52e5-8661-892df3c233d7"
   }
 ]
