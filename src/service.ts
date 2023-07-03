@@ -29,7 +29,6 @@ const postUser = async (data: unknown) => {
 };
 
 const putUser = async (data: unknown, id: string) => {
-  console.log("data", data);
   if (!id) throw new Error("400: userId is invalid");
   const user = await getUser(id);
   if (!user) throw new Error("404: Not Found");
@@ -51,4 +50,17 @@ const putUser = async (data: unknown, id: string) => {
   }
 };
 
-export { getUsers, getUser, postUser, putUser };
+const deleteUser = async (id: string) => {
+  if (!id) throw new Error("400: userId is invalid");
+  const user = await getUser(id);
+  if (!user) throw new Error("404: Not Found");
+  if (user.id === id) {
+    const users = await getUsers();
+    const index = users.findIndex((user: any) => user.id === id);
+    if (index === -1) throw new Error("404: Not Found");
+    users.splice(index, 1);
+    await writeFile("./src/data/users.json", JSON.stringify(users, null, 2));
+  }
+};
+
+export { getUsers, getUser, postUser, putUser, deleteUser };

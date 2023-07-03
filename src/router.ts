@@ -1,6 +1,6 @@
 import { HttpMethod } from "./models";
 import { parse } from "./utils/parse";
-import { getUsers, getUser, postUser, putUser } from "./service";
+import { getUsers, getUser, postUser, putUser, deleteUser } from "./service";
 import { IncomingMessage } from "node:http";
 const router = async (request: IncomingMessage) => {
   const { url, method } = request;
@@ -21,8 +21,7 @@ const router = async (request: IncomingMessage) => {
         });
         break;
       case HttpMethod.DELETE:
-        id ? console.log("DELETE", id) : console.log("DELETE");
-        break;
+        return deleteUser(id);
     }
   } catch (error) {
     const [code, message] = error.message.split(":");
